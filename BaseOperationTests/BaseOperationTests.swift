@@ -1,23 +1,25 @@
-import XCTest
 @testable import BaseOperation
+import XCTest
 
 final class BaseOperationTests: XCTestCase {
     private class Operation: BaseOperation {
         var isExecuteInvoked: Bool = false
-        override func execute() {
-            isExecuteInvoked = true
-        }
+        var willChangeValueForKeyValue: String?
+        var didChangeValueForKeyValue: String?
+
         var _isCancelled = false
         override var isCancelled: Bool {
             return _isCancelled
         }
-        var _willChangeValueForKey: String?
-        override func willChangeValue(forKey key: String) {
-            _willChangeValueForKey = key
+
+        override func execute() {
+            isExecuteInvoked = true
         }
-        var _didChangeValueForKey: String?
+        override func willChangeValue(forKey key: String) {
+            willChangeValueForKeyValue = key
+        }
         override func didChangeValue(forKey key: String) {
-            _didChangeValueForKey = key
+            didChangeValueForKeyValue = key
         }
     }
 
@@ -59,36 +61,36 @@ final class BaseOperationTests: XCTestCase {
     func testChangeStateExecutingCallsWillChangeValueForKey() {
         let operation = Operation()
         operation.state = .executing
-        XCTAssertEqual(operation._willChangeValueForKey, "isExecuting")
+        XCTAssertEqual(operation.willChangeValueForKeyValue, "isExecuting")
     }
 
     func testChangeStateExecutingCallsDidChangeValueForKey() {
         let operation = Operation()
         operation.state = .executing
-        XCTAssertEqual(operation._didChangeValueForKey, "isExecuting")
+        XCTAssertEqual(operation.didChangeValueForKeyValue, "isExecuting")
     }
 
     func testChangeStateFinishedCallsWillChangeValueForKey() {
         let operation = Operation()
         operation.state = .finished
-        XCTAssertEqual(operation._willChangeValueForKey, "isFinished")
+        XCTAssertEqual(operation.willChangeValueForKeyValue, "isFinished")
     }
 
     func testChangeStateFinishedCallsDidChangeValueForKey() {
         let operation = Operation()
         operation.state = .finished
-        XCTAssertEqual(operation._didChangeValueForKey, "isFinished")
+        XCTAssertEqual(operation.didChangeValueForKeyValue, "isFinished")
     }
 
     func testChangeSameStateDoesNotCallWillChangeValueForKey() {
         let operation = Operation()
         operation.state = .ready
-        XCTAssertNil(operation._willChangeValueForKey)
+        XCTAssertNil(operation.willChangeValueForKeyValue)
     }
 
     func testChangeSameStateDoesNotCallDidChangeValueForKey() {
         let operation = Operation()
         operation.state = .ready
-        XCTAssertNil(operation._didChangeValueForKey)
+        XCTAssertNil(operation.didChangeValueForKeyValue)
     }
 }

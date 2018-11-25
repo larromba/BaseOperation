@@ -109,6 +109,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F02A51821AB5CE8007A6ECD /* Build configuration list for PBXNativeTarget "BaseOperation" */;
 			buildPhases = (
+				7F02A52221AB6376007A6ECD /* ShellScript */,
 				7F02A4FF21AB5CE8007A6ECD /* Headers */,
 				7F02A50021AB5CE8007A6ECD /* Sources */,
 				7F02A50121AB5CE8007A6ECD /* Frameworks */,
@@ -194,6 +195,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F02A52221AB6376007A6ECD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${TRAVIS}\" = \"1\" ]; then\n    exit 0\nfi\nif which swiftlint >/dev/null; then\n    swiftlint autocorrect --config \".swiftlint.auto.yml\" && swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7F02A50021AB5CE8007A6ECD /* Sources */ = {
