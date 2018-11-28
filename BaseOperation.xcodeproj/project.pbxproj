@@ -11,10 +11,28 @@
 		7F02A51321AB5CE8007A6ECD /* BaseOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A51221AB5CE8007A6ECD /* BaseOperationTests.swift */; };
 		7F02A51521AB5CE8007A6ECD /* BaseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F02A50721AB5CE8007A6ECD /* BaseOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F02A51F21AB5DC2007A6ECD /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A51E21AB5DC2007A6ECD /* BaseOperation.swift */; };
+		7F8FA70221AECB6400A93E97 /* BaseOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A51221AB5CE8007A6ECD /* BaseOperationTests.swift */; };
+		7F8FA70321AECB6400A93E97 /* BaseOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A51221AB5CE8007A6ECD /* BaseOperationTests.swift */; };
+		7F8FA70721AECB8800A93E97 /* BaseOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A50421AB5CE8007A6ECD /* BaseOperation.framework */; };
+		7F8FA70A21AECB9800A93E97 /* BaseOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A50421AB5CE8007A6ECD /* BaseOperation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		7F02A50F21AB5CE8007A6ECD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F02A4FB21AB5CE8007A6ECD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F02A50321AB5CE8007A6ECD;
+			remoteInfo = BaseOperation;
+		};
+		7F8FA70421AECB8300A93E97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F02A4FB21AB5CE8007A6ECD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F02A50321AB5CE8007A6ECD;
+			remoteInfo = BaseOperation;
+		};
+		7F8FA70821AECB9500A93E97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7F02A4FB21AB5CE8007A6ECD /* Project object */;
 			proxyType = 1;
@@ -27,11 +45,15 @@
 		7F02A50421AB5CE8007A6ECD /* BaseOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F02A50721AB5CE8007A6ECD /* BaseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseOperation.h; sourceTree = "<group>"; };
 		7F02A50821AB5CE8007A6ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F02A50D21AB5CE8007A6ECD /* BaseOperationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseOperationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F02A50D21AB5CE8007A6ECD /* BaseOperationTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseOperationTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F02A51221AB5CE8007A6ECD /* BaseOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperationTests.swift; sourceTree = "<group>"; };
 		7F02A51421AB5CE8007A6ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F02A51E21AB5DC2007A6ECD /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		7F02A52021AB62F4007A6ECD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7F8FA6EE21AECB4900A93E97 /* BaseOperationTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseOperationTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8FA6F221AECB4900A93E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F8FA6FA21AECB5300A93E97 /* BaseOperationTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseOperationTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8FA6FE21AECB5300A93E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +72,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F8FA6EB21AECB4900A93E97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F8FA70721AECB8800A93E97 /* BaseOperation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F8FA6F721AECB5300A93E97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F8FA70A21AECB9800A93E97 /* BaseOperation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,7 +96,10 @@
 			children = (
 				7F02A52021AB62F4007A6ECD /* README.md */,
 				7F02A50621AB5CE8007A6ECD /* BaseOperation */,
-				7F02A51121AB5CE8007A6ECD /* BaseOperationTests */,
+				7F8FA6E921AECABF00A93E97 /* BaseOperationTests */,
+				7F02A51121AB5CE8007A6ECD /* BaseOperationTests-macOS */,
+				7F8FA6EF21AECB4900A93E97 /* BaseOperationTests-iOS */,
+				7F8FA6FB21AECB5300A93E97 /* BaseOperationTests-tvOS */,
 				7F02A50521AB5CE8007A6ECD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				7F02A50421AB5CE8007A6ECD /* BaseOperation.framework */,
-				7F02A50D21AB5CE8007A6ECD /* BaseOperationTests.xctest */,
+				7F02A50D21AB5CE8007A6ECD /* BaseOperationTests-macOS.xctest */,
+				7F8FA6EE21AECB4900A93E97 /* BaseOperationTests-iOS.xctest */,
+				7F8FA6FA21AECB5300A93E97 /* BaseOperationTests-tvOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,13 +125,36 @@
 			path = BaseOperation;
 			sourceTree = "<group>";
 		};
-		7F02A51121AB5CE8007A6ECD /* BaseOperationTests */ = {
+		7F02A51121AB5CE8007A6ECD /* BaseOperationTests-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				7F02A51421AB5CE8007A6ECD /* Info.plist */,
+			);
+			path = "BaseOperationTests-macOS";
+			sourceTree = "<group>";
+		};
+		7F8FA6E921AECABF00A93E97 /* BaseOperationTests */ = {
 			isa = PBXGroup;
 			children = (
 				7F02A51221AB5CE8007A6ECD /* BaseOperationTests.swift */,
-				7F02A51421AB5CE8007A6ECD /* Info.plist */,
 			);
 			path = BaseOperationTests;
+			sourceTree = "<group>";
+		};
+		7F8FA6EF21AECB4900A93E97 /* BaseOperationTests-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7F8FA6F221AECB4900A93E97 /* Info.plist */,
+			);
+			path = "BaseOperationTests-iOS";
+			sourceTree = "<group>";
+		};
+		7F8FA6FB21AECB5300A93E97 /* BaseOperationTests-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				7F8FA6FE21AECB5300A93E97 /* Info.plist */,
+			);
+			path = "BaseOperationTests-tvOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +190,9 @@
 			productReference = 7F02A50421AB5CE8007A6ECD /* BaseOperation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7F02A50C21AB5CE8007A6ECD /* BaseOperationTests */ = {
+		7F02A50C21AB5CE8007A6ECD /* BaseOperationTests-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F02A51B21AB5CE8007A6ECD /* Build configuration list for PBXNativeTarget "BaseOperationTests" */;
+			buildConfigurationList = 7F02A51B21AB5CE8007A6ECD /* Build configuration list for PBXNativeTarget "BaseOperationTests-macOS" */;
 			buildPhases = (
 				7F02A50921AB5CE8007A6ECD /* Sources */,
 				7F02A50A21AB5CE8007A6ECD /* Frameworks */,
@@ -137,9 +203,45 @@
 			dependencies = (
 				7F02A51021AB5CE8007A6ECD /* PBXTargetDependency */,
 			);
-			name = BaseOperationTests;
+			name = "BaseOperationTests-macOS";
 			productName = BaseOperationTests;
-			productReference = 7F02A50D21AB5CE8007A6ECD /* BaseOperationTests.xctest */;
+			productReference = 7F02A50D21AB5CE8007A6ECD /* BaseOperationTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7F8FA6ED21AECB4900A93E97 /* BaseOperationTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F8FA6F321AECB4900A93E97 /* Build configuration list for PBXNativeTarget "BaseOperationTests-iOS" */;
+			buildPhases = (
+				7F8FA6EA21AECB4900A93E97 /* Sources */,
+				7F8FA6EB21AECB4900A93E97 /* Frameworks */,
+				7F8FA6EC21AECB4900A93E97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F8FA70521AECB8300A93E97 /* PBXTargetDependency */,
+			);
+			name = "BaseOperationTests-iOS";
+			productName = "BaseOperationTests-iOS";
+			productReference = 7F8FA6EE21AECB4900A93E97 /* BaseOperationTests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7F8FA6F921AECB5300A93E97 /* BaseOperationTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F8FA6FF21AECB5300A93E97 /* Build configuration list for PBXNativeTarget "BaseOperationTests-tvOS" */;
+			buildPhases = (
+				7F8FA6F621AECB5300A93E97 /* Sources */,
+				7F8FA6F721AECB5300A93E97 /* Frameworks */,
+				7F8FA6F821AECB5300A93E97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F8FA70921AECB9500A93E97 /* PBXTargetDependency */,
+			);
+			name = "BaseOperationTests-tvOS";
+			productName = "BaseOperationTests-tvOS";
+			productReference = 7F8FA6FA21AECB5300A93E97 /* BaseOperationTests-tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -159,6 +261,12 @@
 					7F02A50C21AB5CE8007A6ECD = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					7F8FA6ED21AECB4900A93E97 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7F8FA6F921AECB5300A93E97 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 7F02A4FE21AB5CE8007A6ECD /* Build configuration list for PBXProject "BaseOperation" */;
@@ -174,7 +282,9 @@
 			projectRoot = "";
 			targets = (
 				7F02A50321AB5CE8007A6ECD /* BaseOperation */,
-				7F02A50C21AB5CE8007A6ECD /* BaseOperationTests */,
+				7F02A50C21AB5CE8007A6ECD /* BaseOperationTests-macOS */,
+				7F8FA6ED21AECB4900A93E97 /* BaseOperationTests-iOS */,
+				7F8FA6F921AECB5300A93E97 /* BaseOperationTests-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -188,6 +298,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7F02A50B21AB5CE8007A6ECD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F8FA6EC21AECB4900A93E97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F8FA6F821AECB5300A93E97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -233,6 +357,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F8FA6EA21AECB4900A93E97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F8FA70221AECB6400A93E97 /* BaseOperationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F8FA6F621AECB5300A93E97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F8FA70321AECB6400A93E97 /* BaseOperationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +380,16 @@
 			isa = PBXTargetDependency;
 			target = 7F02A50321AB5CE8007A6ECD /* BaseOperation */;
 			targetProxy = 7F02A50F21AB5CE8007A6ECD /* PBXContainerItemProxy */;
+		};
+		7F8FA70521AECB8300A93E97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F02A50321AB5CE8007A6ECD /* BaseOperation */;
+			targetProxy = 7F8FA70421AECB8300A93E97 /* PBXContainerItemProxy */;
+		};
+		7F8FA70921AECB9500A93E97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F02A50321AB5CE8007A6ECD /* BaseOperation */;
+			targetProxy = 7F8FA70821AECB9500A93E97 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -387,7 +537,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.BaseOperation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
@@ -415,7 +567,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.BaseOperation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -427,14 +581,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
-				INFOPLIST_FILE = BaseOperationTests/Info.plist;
+				INFOPLIST_FILE = "BaseOperationTests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.BaseOperationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.BaseOperationTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -446,15 +602,101 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
-				INFOPLIST_FILE = BaseOperationTests/Info.plist;
+				INFOPLIST_FILE = "BaseOperationTests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.BaseOperationTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.BaseOperationTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		7F8FA6F421AECB4900A93E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = "BaseOperationTests-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.BaseOperationTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F8FA6F521AECB4900A93E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = "BaseOperationTests-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.BaseOperationTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F8FA70021AECB5300A93E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = "BaseOperationTests-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.BaseOperationTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		7F8FA70121AECB5300A93E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = "BaseOperationTests-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.BaseOperationTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -479,11 +721,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F02A51B21AB5CE8007A6ECD /* Build configuration list for PBXNativeTarget "BaseOperationTests" */ = {
+		7F02A51B21AB5CE8007A6ECD /* Build configuration list for PBXNativeTarget "BaseOperationTests-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F02A51C21AB5CE8007A6ECD /* Debug */,
 				7F02A51D21AB5CE8007A6ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F8FA6F321AECB4900A93E97 /* Build configuration list for PBXNativeTarget "BaseOperationTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F8FA6F421AECB4900A93E97 /* Debug */,
+				7F8FA6F521AECB4900A93E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F8FA6FF21AECB5300A93E97 /* Build configuration list for PBXNativeTarget "BaseOperationTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F8FA70021AECB5300A93E97 /* Debug */,
+				7F8FA70121AECB5300A93E97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
