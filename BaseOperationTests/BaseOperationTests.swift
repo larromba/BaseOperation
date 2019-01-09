@@ -23,74 +23,108 @@ final class BaseOperationTests: XCTestCase {
         }
     }
 
+    private var operation: Operation!
+
+    override func setUp() {
+        super.setUp()
+        operation = Operation()
+    }
+
+    override func tearDown() {
+        operation = nil
+        super.tearDown()
+    }
+
     func testInitState() {
-        let operation = Operation()
+        // test
         XCTAssertEqual(operation.state, .ready)
     }
 
     func testIsReady() {
-        let operation = Operation()
+        // sut
         operation.state = .ready
+
+        // test
         XCTAssertTrue(operation.isReady)
         XCTAssertFalse(operation.isExecuting)
         XCTAssertFalse(operation.isFinished)
     }
 
     func testIsExecuting() {
-        let operation = Operation()
+        // sut
         operation.state = .executing
+
+        // test
         XCTAssertFalse(operation.isReady)
         XCTAssertTrue(operation.isExecuting)
         XCTAssertFalse(operation.isFinished)
     }
 
     func testStartWhenIsCancelledChangesStateToFinished() {
-        let operation = Operation()
+        // mocks
         operation._isCancelled = true
+
+        // sut
         operation.start()
+
+        // test
         XCTAssertEqual(operation.state, .finished)
     }
 
     func testStartWhenIsNotCancelledChangesStateToExecutingAndExecutes() {
-        let operation = Operation()
+        // sut
         operation.start()
+
+        // test
         XCTAssertEqual(operation.state, .executing)
         XCTAssertTrue(operation.isExecuteInvoked)
     }
 
     func testChangeStateExecutingCallsWillChangeValueForKey() {
-        let operation = Operation()
+        // sut
         operation.state = .executing
+
+        // test
         XCTAssertEqual(operation.willChangeValueForKeyValue, "isExecuting")
     }
 
     func testChangeStateExecutingCallsDidChangeValueForKey() {
-        let operation = Operation()
+        // sut
         operation.state = .executing
+
+        // test
         XCTAssertEqual(operation.didChangeValueForKeyValue, "isExecuting")
     }
 
     func testChangeStateFinishedCallsWillChangeValueForKey() {
-        let operation = Operation()
+        // sut
         operation.state = .finished
+
+        // test
         XCTAssertEqual(operation.willChangeValueForKeyValue, "isFinished")
     }
 
     func testChangeStateFinishedCallsDidChangeValueForKey() {
-        let operation = Operation()
+        // sut
         operation.state = .finished
+
+        // test
         XCTAssertEqual(operation.didChangeValueForKeyValue, "isFinished")
     }
 
     func testChangeSameStateDoesNotCallWillChangeValueForKey() {
-        let operation = Operation()
+        // sut
         operation.state = .ready
+
+        // test
         XCTAssertNil(operation.willChangeValueForKeyValue)
     }
 
     func testChangeSameStateDoesNotCallDidChangeValueForKey() {
-        let operation = Operation()
+        // sut
         operation.state = .ready
+
+        // test
         XCTAssertNil(operation.didChangeValueForKeyValue)
     }
 }
