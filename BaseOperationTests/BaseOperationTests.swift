@@ -1,6 +1,7 @@
 @testable import BaseOperation
 import XCTest
 
+// swiftlint:disable identifier_name
 final class BaseOperationTests: XCTestCase {
     private class Operation: BaseOperation {
         var isExecuteInvoked: Bool = false
