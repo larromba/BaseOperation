@@ -1,8 +1,8 @@
 @testable import BaseOperation
 import XCTest
 
-// swiftlint:disable identifier_name
 final class BaseOperationTests: XCTestCase {
+    // swiftlint:disable identifier_name lower_acl_than_parent
     private class Operation: BaseOperation {
         var isExecuteInvoked: Bool = false
         var willChangeValueForKeyValue: String?
@@ -36,12 +36,12 @@ final class BaseOperationTests: XCTestCase {
         super.tearDown()
     }
 
-    func testInitState() {
+    func test_state_whenInitialized_expectReady() {
         // test
         XCTAssertEqual(operation.state, .ready)
     }
 
-    func testIsReady() {
+    func test_state_whenReady_expectConfiguration() {
         // sut
         operation.state = .ready
 
@@ -51,7 +51,7 @@ final class BaseOperationTests: XCTestCase {
         XCTAssertFalse(operation.isFinished)
     }
 
-    func testIsExecuting() {
+    func test_state_whenExecuting_expectConfiguration() {
         // sut
         operation.state = .executing
 
@@ -61,9 +61,10 @@ final class BaseOperationTests: XCTestCase {
         XCTAssertFalse(operation.isFinished)
     }
 
-    func testStartWhenIsCancelledChangesStateToFinished() {
+    func test_operation_whenCancelled_expectStateChangesToFinished() {
         // mocks
         operation._isCancelled = true
+        XCTAssertNotEqual(operation.state, .finished)
 
         // sut
         operation.start()
@@ -72,16 +73,25 @@ final class BaseOperationTests: XCTestCase {
         XCTAssertEqual(operation.state, .finished)
     }
 
-    func testStartWhenIsNotCancelledChangesStateToExecutingAndExecutes() {
+    func test_operation_whenStarted_expectChangesStateToExecuting() {
         // sut
         operation.start()
+        XCTAssertNotEqual(operation.state, .executing)
 
         // test
         XCTAssertEqual(operation.state, .executing)
         XCTAssertTrue(operation.isExecuteInvoked)
     }
 
-    func testChangeStateExecutingCallsWillChangeValueForKey() {
+    func test_operation_whenStarted_expectExecuteIsInvoked() {
+        // sut
+        operation.start()
+
+        // test
+        XCTAssertTrue(operation.isExecuteInvoked)
+    }
+
+    func test_state_whenExecuting_expectCorrectWillChangeValueForKey() {
         // sut
         operation.state = .executing
 
@@ -89,7 +99,7 @@ final class BaseOperationTests: XCTestCase {
         XCTAssertEqual(operation.willChangeValueForKeyValue, "isExecuting")
     }
 
-    func testChangeStateExecutingCallsDidChangeValueForKey() {
+    func test_state_whenExecuting_expectCorrectDidChangeValueForKey() {
         // sut
         operation.state = .executing
 
@@ -97,7 +107,7 @@ final class BaseOperationTests: XCTestCase {
         XCTAssertEqual(operation.didChangeValueForKeyValue, "isExecuting")
     }
 
-    func testChangeStateFinishedCallsWillChangeValueForKey() {
+    func test_state_whenFinished_expectCorrectWillChangeValueForKey() {
         // sut
         operation.state = .finished
 
@@ -105,7 +115,7 @@ final class BaseOperationTests: XCTestCase {
         XCTAssertEqual(operation.willChangeValueForKeyValue, "isFinished")
     }
 
-    func testChangeStateFinishedCallsDidChangeValueForKey() {
+    func test_state_whenFinished_expectCorrectDidChangeValueForKey() {
         // sut
         operation.state = .finished
 
@@ -113,7 +123,7 @@ final class BaseOperationTests: XCTestCase {
         XCTAssertEqual(operation.didChangeValueForKeyValue, "isFinished")
     }
 
-    func testChangeSameStateDoesNotCallWillChangeValueForKey() {
+    func test_state_whenReady_expectCorrectWillChangeValueForKey() {
         // sut
         operation.state = .ready
 
@@ -121,7 +131,7 @@ final class BaseOperationTests: XCTestCase {
         XCTAssertNil(operation.willChangeValueForKeyValue)
     }
 
-    func testChangeSameStateDoesNotCallDidChangeValueForKey() {
+    func test_state_whenReady_expectCorrectDidChangeValueForKey() {
         // sut
         operation.state = .ready
 
