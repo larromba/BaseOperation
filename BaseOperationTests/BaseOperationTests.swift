@@ -75,8 +75,8 @@ final class BaseOperationTests: XCTestCase {
 
     func test_operation_whenStarted_expectChangesStateToExecuting() {
         // sut
-        operation.start()
         XCTAssertNotEqual(operation.state, .executing)
+        operation.start()
 
         // test
         XCTAssertEqual(operation.state, .executing)
